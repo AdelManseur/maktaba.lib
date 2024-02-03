@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Document</title>
     <style>
         * {
@@ -239,13 +243,136 @@
             text-decoration: none;
             color: #2C8EBB;
         }
+        .barr{
+            display: flex;
+        }
         .bar{
-            width: 450px;
-            height: 75px;
+            width: 370px;
+            height: 70px;
             margin-top: 20px;
             margin-left: 80px;
             background-color: #120B2A;
             border-radius: 25px;
+            color: #F5F5F5;
+            font-size: 700;
+            padding-top: 23px;
+            padding-left: 30px;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 700;
+            font-size: 20px;
+            display: flex;
+            white-space: nowrap;
+        }
+        .barjs{
+            width: 364px;
+            height: 80px;
+            margin-top: 20px;
+            margin-left: 80px;
+            background-color: #120B2A;
+            border-radius: 25px 0px 0px 25px;
+            color: #F5F5F5;
+            font-size: 700;
+            padding-top: 23px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 700;
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: auto;
+
+
+            &::-webkit-scrollbar{
+                background-color: transparent;
+                width: 10px;
+                height: 19px;       
+            }
+            &::-webkit-scrollbar-thumb{
+                background-color: #F5F5F5;
+                border-radius: 25px;
+                border: 6px solid #120B2A;
+            }
+            &::-webkit-scrollbar-track{
+                background-color: transparent;
+                border-radius: 25px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+        .barjs2{
+            width: 364px;
+            height: 80px;
+            margin-top: 20px;
+            margin-left: 80px;
+            background-color: #120B2A;
+            border-radius: 25px 0px 0px 25px;
+            color: #F5F5F5;
+            font-size: 700;
+            padding-top: 23px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 700;
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: auto;
+
+
+            &::-webkit-scrollbar{
+                background-color: transparent;
+                width: 10px;
+                height: 19px;       
+            }
+            &::-webkit-scrollbar-thumb{
+                background-color: #F5F5F5;
+                border-radius: 25px;
+                border: 6px solid #120B2A;
+            }
+            &::-webkit-scrollbar-track{
+                background-color: transparent;
+                border-radius: 25px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+        .innerBarjs{
+            width: 90px;
+            height: 80px;
+            margin-top: 20px;
+            border-radius: 0px 25px 25px 0px;
+            background-color: #120B2A;
+        }
+        .innerBarjs2{
+            width: 90px;
+            height: 70px;
+            margin-left: 60px;
+            margin-top: -23px;
+            border-radius: 0px 25px 25px 0px;
+            background-color: #120B2A;
+        }
+        .copyButton{
+            background-color: transparent;
+            border: none;
+            color: #F5F5F5;
+            padding-top: 27px;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+        .copyButton2{
+            background-color: transparent;
+            border: none;
+            color: #F5F5F5;
+            padding-top: 23px;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+        .copyButton3{
+            background-color: transparent;
+            border: none;
+            color: #F5F5F5;
+            padding-top: 23px;
+            padding-left: 22px;
+            cursor: pointer;
         }
         /*.extensions{
         }*/
@@ -376,7 +503,7 @@
             font-size: 20px;
             text-align: center;
             margin-top: 20px;
-            margin-bottom: 40px;
+            padding-bottom: 40px;
             font-family: 'Oooh Baby', cursive;
         }
 
@@ -701,6 +828,67 @@
             margin-top: 25px;
         }
         }
+
+        .popup {
+            position: absolute;
+            background-color: #f1f1f1;
+            color: #000;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            padding: 10px;
+            display: none;
+            margin-left: 448px;
+            margin-top: -10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow added */
+        }
+        .popup2 {
+            position: absolute;
+            background-color: #f1f1f1;
+            color: #000;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            padding: 10px;
+            display: none;
+            margin-left: 448px;
+            margin-top: -10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow added */
+        }
+        .popup3 {
+            position: absolute;
+            background-color: #f1f1f1;
+            color: #000;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            padding: 10px;
+            display: none;
+            margin-left: 448px;
+            margin-top: -10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow added */
+        }
+        .popup4 {
+            position: absolute;
+            background-color: #f1f1f1;
+            color: #000;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            padding: 10px;
+            display: none;
+            margin-left: 250px;
+            margin-top: -55px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow added */
+        }
+        .popup5 {
+            position: absolute;
+            background-color: #f1f1f1;
+            color: #000;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            padding: 10px;
+            display: none;
+            margin-left: 250px;
+            margin-top: -55px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow added */
+        }
     </style>
 </head>
 
@@ -751,9 +939,33 @@
             <div class="pInstallDes">Download node.js via their official website <a class="a" href="https://nodejs.org/en">www.node.io</a>.</div>
             <div class="pInstall">. NPM (Node Package Manager)</div>
             <div class="pInstallDes">Then install maktaba by running this in the same terminal</div>
-            <div class="bar"></div>
+            <div class="bar">
+                <div class="barouzli9">
+                npm install maktaba
+                </div>
+                <div class="popup4">copied</div>
+                <div class="innerBarjs2">
+                    <button class="copyButton2" onclick="copyText4();">
+                        <span class="material-symbols-outlined">
+                            content_copy
+                        </span>
+                    </button>
+                </div>
+            </div>
             <div class="pInstall">. Yarn package manager</div>
-            <div class="bar"></div>
+            <div class="bar">
+                <div class="barouzli9">
+                yarn install maktaba
+                </div>
+                <div class="popup5">copied</div>
+                <div class="innerBarjs2">
+                    <button class="copyButton3" onclick="copyText5();">
+                        <span class="material-symbols-outlined">
+                            content_copy
+                        </span>
+                    </button>
+                </div>
+            </div>
     </div>
         <div class="getStartedLine"></div>
         <div class="getStarted">
@@ -768,11 +980,47 @@
             <div class="pInstall">Link via CDN (Content Delivery Content)</div>
             <div class='pInstallDes'>Copy this link element and Paste it into the head element in your HTML file</div>
             <div class="pInstall">. JavaScript</div>
-            <div class="bar"></div>
+            <div class="barr">
+                <div class="popup">copied</div>
+                <div class="barjs">
+                    &lt;script src='https://cdn.statically.io/gh/AdelManseur/maktaba/main/JavaScript/element.js'&gt;&lt;/script&gt;
+                </div>
+                <div class="innerBarjs">
+                    <button class="copyButton" onclick="copyText();">
+                        <span class="material-symbols-outlined">
+                        content_copy
+                        </span>
+                    </button>
+                </div>
+                </div>
             <div class="pInstall">. CSS</div>
-            <div class="bar"></div>
+            <div class="barr">
+                <div class="popup2">copied</div>
+                <div class="barjs">
+                    &lt;script src='https://cdn.statically.io/gh/AdelManseur/maktaba/main/JavaScript/element.js'&gt;&lt;/script&gt;
+                </div>
+                <div class="innerBarjs">
+                    <button class="copyButton" onclick="copyText2();">
+                        <span class="material-symbols-outlined">
+                        content_copy
+                        </span>
+                    </button>
+                </div>
+                </div>
             <div class="pInstall">. PHP</div>
-            <div class="bar"></div>
+            <div class="barr">
+                <div class="popup3">copied</div>
+                <div class="barjs">
+                    &lt;script src='https://cdn.statically.io/gh/AdelManseur/maktaba/main/JavaScript/element.js'&gt;&lt;/script&gt;
+                </div>
+                <div class="innerBarjs">
+                    <button class="copyButton" onclick="copyText3();">
+                        <span class="material-symbols-outlined">
+                        content_copy
+                        </span>
+                    </button>
+                </div>
+                </div>
     </div>
 </div>
 
@@ -828,6 +1076,172 @@
     <div class="bottomhr"></div>
     <img title="bottom logo" src="maktaba.png" class="bottomLogo">
     <div class="bwl">Build with love</div>
+
+
+
+    <script>
+
+        function copyText() {
+        // Get the text from the div
+        const textToCopy = document.querySelector('.barjs');
+        const text = textToCopy.innerText;
+
+        // Create a textarea element to copy the text to the clipboard
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+
+        // Select the text in the textarea
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text to the clipboard
+        document.execCommand('copy');
+
+        // Remove the textarea element
+        document.body.removeChild(textarea);
+
+        // Show the popup
+        const popup = document.querySelector('.popup');
+        popup.style.display = 'block';
+
+        // Hide the popup after a short delay
+        setTimeout(() => {
+        popup.style.display = 'none';
+        }, 2000); // 2000 milliseconds (2 seconds) for example
+
+        }
+
+
+        function copyText2() {
+        // Get the text from the div
+        const textToCopy = document.querySelector('.barjs');
+        const text = textToCopy.innerText;
+
+        // Create a textarea element to copy the text to the clipboard
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+
+        // Select the text in the textarea
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text to the clipboard
+        document.execCommand('copy');
+
+        // Remove the textarea element
+        document.body.removeChild(textarea);
+
+        // Show the popup
+        const popup = document.querySelector('.popup2');
+        popup.style.display = 'block';
+
+        // Hide the popup after a short delay
+        setTimeout(() => {
+        popup.style.display = 'none';
+        }, 2000); // 2000 milliseconds (2 seconds) for example
+
+        }
+        
+  
+      function copyText3() {
+        // Get the text from the div
+        const textToCopy = document.querySelector('.barjs');
+        const text = textToCopy.innerText;
+
+        // Create a textarea element to copy the text to the clipboard
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+
+        // Select the text in the textarea
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text to the clipboard
+        document.execCommand('copy');
+
+        // Remove the textarea element
+        document.body.removeChild(textarea);
+
+        // Show the popup
+        const popup = document.querySelector('.popup3');
+        popup.style.display = 'block';
+
+        // Hide the popup after a short delay
+        setTimeout(() => {
+        popup.style.display = 'none';
+        }, 2000); // 2000 milliseconds (2 seconds) for example
+
+        }
+
+        function copyText4() {
+        // Get the text from the div
+        const textToCopy = document.querySelector('.barouzli9');
+        const text = textToCopy.innerText;
+
+        // Create a textarea element to copy the text to the clipboard
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+
+        // Select the text in the textarea
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text to the clipboard
+        document.execCommand('copy');
+
+        // Remove the textarea element
+        document.body.removeChild(textarea);
+
+        // Show the popup
+        const popup = document.querySelector('.popup4');
+        popup.style.display = 'block';
+
+        // Hide the popup after a short delay
+        setTimeout(() => {
+        popup.style.display = 'none';
+        }, 2000); // 2000 milliseconds (2 seconds) for example
+
+        }
+
+        function copyText5() {
+        // Get the text from the div
+        const textToCopy = document.querySelector('.barouzli9');
+        const text = textToCopy.innerText;
+
+        // Create a textarea element to copy the text to the clipboard
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+
+        // Select the text in the textarea
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text to the clipboard
+        document.execCommand('copy');
+
+        // Remove the textarea element
+        document.body.removeChild(textarea);
+
+        // Show the popup
+        const popup = document.querySelector('.popup5');
+        popup.style.display = 'block';
+
+        // Hide the popup after a short delay
+        setTimeout(() => {
+        popup.style.display = 'none';
+        }, 2000); // 2000 milliseconds (2 seconds) for example
+
+        }
+  </script>
+
+</body>
+</html>
+    </script>
 
 </body>
 </html>
