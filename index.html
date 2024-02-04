@@ -30,11 +30,18 @@
         .header{
             display: flex;
         }
+        .allHeader{
+            position: fixed;
+            background-color: #F5F5F5;
+            width: 100%;
+            top: 0;
+        }
         .headerhr{
             height: 1px;
             background-color: #C3C0C0;
             width: 100%;
             margin-top: 20px;
+            box-shadow: 7px 0px 10px 0px #000000;
         }
         .logoImage{
             width: 200px;
@@ -83,7 +90,7 @@
         .logoandslogan{
             justify-content: center;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 140px;
             line-height: 1.1;
         }
         .logoandslogan img{
@@ -408,6 +415,7 @@
         }
         .h4{
             margin-top: 0px;
+            margin-bottom: 40px;
             height: 1px;
             width: 60%;
             margin-left: 250px;
@@ -464,12 +472,21 @@
         }
         .notion{
             height: 60px;
-            margin-left: 300px;
-            margin-right: 250px;
+            margin-left: 240px;
+            margin-right: 2px;
+        }
+        .notionCal{
+            height: 90px;
+            margin-left: 3px;
+            margin-right: 220px;
+            margin-top: -12px;
+        }
+        .notionImgs{
+            display: flex;
         }
         .obsidian{
             height: 70px;
-            margin-left: 230px;
+            margin-left: 250px;
         }
         .notionLink{
             font-size: 30px;
@@ -494,17 +511,30 @@
             margin-top: 30px;
             margin-bottom: 20px;
         }
+        .bottomHeader{
+            display: flex;
+        }
         .bottomLogo{
             width: 200px;
-            margin-left: 504px;
+            height: 37px;
+            margin-left: 150px;
             margin-top: 25px;
         }
         .bwl{
             font-size: 20px;
-            text-align: center;
-            margin-top: 20px;
+            margin-left: 200px;
+            margin-top: 0px;
             padding-bottom: 40px;
             font-family: 'Oooh Baby', cursive;
+        }
+        .contactUs{
+            font-size: 20px;
+            margin-left: 300px;
+            margin-top: 50px;
+        }
+        .contactUsStyle{
+            text-decoration: none;
+            color: #120B2A;
         }
 
 
@@ -889,12 +919,23 @@
             margin-top: -55px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow added */
         }
+        .forms{
+            width: 85px;
+        }
     </style>
 </head>
 
+<div class="allHeader">
     <div class="header">
         <img title="logo header" src="maktaba.png" class="logoImage">
-        <button class="button0">Docs</button>
+        <button class="button0" onclick="
+            let docs = document.createElement('iframe');
+            docs.src = `https://maktabalib.super.site/javascript`;
+            docs.style.width = '100%';
+            docs.style.height = '3300px';
+            docs.style.border = 'none';
+            document.body.appendChild(docs);
+        ">Docs</button>
         <button class="button2">Examples</button>
         <a class="button3"><span class="material-symbols-outlined">language</span></a>
         <a class="button4"><span class="material-symbols-outlined">
@@ -902,6 +943,7 @@
             </span></a>
     </div>
     <div class="headerhr"></div>
+</div>
 
     <div class="logoandslogan">
         <img title="logo" src="logo.png">
@@ -1033,7 +1075,7 @@
         <div class="h3"></div>
             <div class="vscodeImage">
                 <div class="vertical2"></div>
-                <img title="vscodeExtensionImage" src="vscodeExtension.png" class="vscodeImg">
+                <a href="https://marketplace.visualstudio.com/items?itemName=Maktaba.maktaba" type="button"><img title="vscodeExtensionImage" src="vscodeExtension.png" class="vscodeImg"></a>
                 <div class="vertical3"></div>
             </div>
             <div class="h4"></div>
@@ -1063,20 +1105,25 @@
     <div class="track">Track Maktaba’s changes</div> 
     <div class="trackDiv">
         <div>
+            <div class="notionImgs">
             <img title="notion" src="Notion2.png" class="notion">
+            <img title="Notion Calendar" src="notionCalendar.png" class="notionCal">
+            </div>
             <div class="notionLink">Our Events, News and Courses<br><a class="a" href="https://www.notion.so/I-9c8c5f0ea45543ed9c3cb3a8afb4a176">maktabaa.notion</a></div>
         </div>
     <div class="trackLine"></div>
         <div>
-            <img title="obsidian" src="obsidian2.png" class="obsidian">
+            <img title="obsidian" src="obsidian3.png" class="obsidian">
             <div class="obsidianLink">Our package changes<br><a class="a" href="">maktaba.obsidian</a></div>
         </div>
     </div>
 
     <div class="bottomhr"></div>
-    <img title="bottom logo" src="maktaba.png" class="bottomLogo">
+    <div class="bottomHeader">
+        <img title="bottom logo" src="maktaba.png" class="bottomLogo">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf86wnfqcXBJOYlC5TlQlZvL9ioddKS6zFycLnFKhSAbztS9w/viewform?usp=sf_link" class="contactUsStyle"><div class="contactUs">Contact us</div></a>
+    </div>
     <div class="bwl">Build with love</div>
-
 
 
     <script>
@@ -1110,6 +1157,9 @@
         popup.style.display = 'none';
         }, 2000); // 2000 milliseconds (2 seconds) for example
 
+        let button = document.createElement("button");
+        button.innerHTML = "<span class='material-symbols-outlined'>Check</span>";
+        innerBarjs.appendChild(button);
         }
 
 
